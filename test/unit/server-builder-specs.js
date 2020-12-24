@@ -148,6 +148,14 @@ describe('server-builder', function () {
         /Single quotes, dollar characters and whitespace characters are disallowed in additional dependencies/);
     });
 
+    it('should throw on single quotes in additional processors', async function () {
+      let serverBuilder = new ServerBuilder({serverPath});
+      serverBuilder.additionalAppAnnotationProcessors = ['foo.\':1.2.3'];
+
+      await serverBuilder.insertAdditionalDependencies().should.be.eventually.rejectedWith(
+        /Single quotes, dollar characters and whitespace characters are disallowed in additional dependencies/);
+    });
+
     it('should throw on dollar characters in additional dependencies', async function () {
       let serverBuilder = new ServerBuilder({serverPath});
       serverBuilder.additionalAndroidTestDependencies = ['foo.\':1.2.3'];
