@@ -68,6 +68,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     // additionalAppDependencies placeholder (don't change or delete this line)
 
+    // additionalAppAnnotationProcessors placeholder (don't change or delete this line)
+
     testImplementation "org.powermock:powermock-api-mockito2:$mocklib_version"
     testImplementation "org.powermock:powermock-classloading-xstream:$mocklib_version"
     testImplementation "org.powermock:powermock-module-junit4-rule:$mocklib_version"
