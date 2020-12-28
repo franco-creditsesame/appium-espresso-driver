@@ -28,6 +28,8 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.android.tools.build:gradle:$android_gradle_plugin_version"
 
+        // additionalClasspaths placeholder (don't change or delete this line)
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
